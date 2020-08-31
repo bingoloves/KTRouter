@@ -76,6 +76,7 @@ ext {
             "jpush"                  : "cn.jiguang.sdk:jpush:3.0.9",
             "jpushcore"              : "cn.jiguang.sdk:jcore:1.1.7",
             "android-gif-drawable"   : "pl.droidsonroids.gif:android-gif-drawable:1.1.10",
+            "flyco-tab-layout"       : "com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar",
     ]
 }
 
