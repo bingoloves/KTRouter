@@ -1,4 +1,4 @@
-package com.kt.base
+package com.kt.adapter
 
 import android.support.annotation.NonNull
 import android.support.v4.app.Fragment
@@ -15,7 +15,7 @@ class BasePagerAdapter : FragmentPagerAdapter {
     private var fm: FragmentManager
 
 
-    constructor(fm: FragmentManager, fragments: ArrayList<Fragment>) : super(fm) {
+    constructor(fm: FragmentManager, fragments: MutableList<Fragment>) : super(fm) {
         this.fm = fm
         this.mFragments = fragments
     }

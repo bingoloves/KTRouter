@@ -5,20 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.kt.MainActivity">
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewPage"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/tabLayout"/>
-
     <com.flyco.tablayout.SlidingTabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:background="@color/colorAccent"
+        android:background="@color/colorPrimary"
         app:tl_indicator_height="2dp"
-        app:tl_indicator_width="10dp"
+        app:tl_indicator_width="100dp"
         app:tl_tab_space_equal="true" />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"/>
 </RelativeLayout>
