@@ -34,4 +34,8 @@ dependencies {
     implementation rootProject.ext.dependencies["cardview-v7"]
     implementation rootProject.ext.dependencies["design"]
     implementation rootProject.ext.dependencies["flyco-tab-layout"]
+    implementation rootProject.ext.dependencies["smart-refresh"]
+    implementation rootProject.ext.dependencies["smart-refresh-header"]
+    implementation rootProject.ext.dependencies["calendar"]
+    implementation project(':ui')
 }

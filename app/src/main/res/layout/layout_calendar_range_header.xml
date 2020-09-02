@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="52dp"
+    xmlns:tools="http://schemas.android.com/tools">
+    <TextView
+        android:id="@+id/tv_range"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:text="选择范围"/>
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tv_range"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        tools:text="2019/08~2019/12"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/tv_sure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:layout_centerVertical="true"
+        android:padding="10dp"
+        android:layout_alignParentRight="true"
+        android:textSize="14sp"
+        android:text="确定" />
+</RelativeLayout>
