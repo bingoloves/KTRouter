@@ -2,12 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <GridView
-        android:id="@+id/gridView"
+    <com.cq.ui.widget.ScrollableRecyclerView
+        android:id="@+id/gridRv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:numColumns="4"
-        android:layout_margin="10dp"
-        android:verticalSpacing="10dp"
-        android:horizontalSpacing="4dp"/>
+        android:layout_height="200dp"
+        android:layout_margin="10dp"/>
 </RelativeLayout>

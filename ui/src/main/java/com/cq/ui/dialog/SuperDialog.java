@@ -441,7 +441,7 @@ public class SuperDialog extends IBaseDialog implements IDialog {
             params.cancelable = false;
             params.isCancelableOutside = false;
             params.gravity = Gravity.CENTER;
-            params.layoutRes = R.layout.lib_ui_layout_dialog_default;
+            params.layoutRes = R.layout.widget_dialog_default;
             params.dimAmount = 0.5f;
             params.dialogWidth = (int) (getScreenWidth((Activity) params.context) * 0.85f);
             params.dialogHeight = WindowManager.LayoutParams.WRAP_CONTENT;

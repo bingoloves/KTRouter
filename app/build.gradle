@@ -16,6 +16,13 @@ android {
                 arguments = [moduleName: project.getName()]
             }
         }
+        lintOptions {
+            checkReleaseBuilds false
+            abortOnError false
+        }
+        ndk {
+            abiFilters 'armeabi-v7a', 'x86'
+        }
     }
     buildTypes {
         release {
@@ -23,14 +30,23 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    implementation rootProject.ext.dependencies["appcompat-v7"]
+    //implementation rootProject.ext.dependencies["appcompat-v7"]
     implementation rootProject.ext.dependencies["constraint-layout"]
-    implementation rootProject.ext.dependencies["recyclerview-v7"]
+    //implementation rootProject.ext.dependencies["recyclerview-v7"]
     implementation rootProject.ext.dependencies["cardview-v7"]
     implementation rootProject.ext.dependencies["design"]
     implementation rootProject.ext.dependencies["flyco-tab-layout"]
@@ -38,4 +54,20 @@ dependencies {
     implementation rootProject.ext.dependencies["smart-refresh-header"]
     implementation rootProject.ext.dependencies["calendar"]
     implementation project(':ui')
+    debugImplementation project(path: ':crash')
+    //播放器库
+    //该依赖仅包含MediaPlayer解码
+    implementation 'com.kk.taurus.playerbase:playerbase:3.3.5'
+    //---------如果使用ExoPlayer解码，使用以下依赖。---------
+    //该依赖包含exoplayer解码和MediaPlayer解码
+    //注意exoplayer的最小支持SDK版本为16
+    implementation 'cn.jiajunhui:exoplayer:335_291_008'
+    //implementation 'com.google.android.exoplayer:extension-rtmp:2.9.1'
+    //---------如果使用ijkPlayer解码，使用以下依赖。---------
+    //该依赖包含ijkplayer解码和MediaPlayer解码
+    implementation 'cn.jiajunhui:ijkplayer:335_088_007'
+    //ijk官方的解码库依赖，较少格式版本且不支持HTTPS。
+    implementation 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.8'
+    implementation rootProject.ext.dependencies["butterknife"]
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
 }

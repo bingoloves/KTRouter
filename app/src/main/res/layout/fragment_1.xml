@@ -3,7 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white">
-
+    <com.cq.ui.float_window.SpeedDialOverlayLayout
+        android:id="@+id/floatMasker"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
     <Button
         android:id="@+id/btnTest"
         android:layout_width="match_parent"

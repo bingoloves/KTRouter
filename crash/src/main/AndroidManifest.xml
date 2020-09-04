@@ -1,0 +1,29 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.app.crash">
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <application>
+        <activity android:name=".ui.CrashInfoActivity"></activity>
+        <activity
+            android:name=".ui.CrashViewerActivity"
+            android:icon="@mipmap/ic_crash_icon"
+            android:taskAffinity="com.app.crash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".service.MyService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":crashcanary"></service>
+
+        <provider
+            android:name=".cp.CrashContentProvider"
+            android:authorities="${applicationId}.crash.logger"
+            android:enabled="true"
+            android:exported="false" />
+    </application>
+</manifest>

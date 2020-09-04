@@ -60,7 +60,7 @@ ext {
             "glide-compiler"         : "com.github.bumptech.glide:compiler:4.8.0",
             "material-dialogs-core"  : "com.afollestad.material-dialogs:core:0.9.4.5",//material-dialogs
             "material-dialogs-commons": "com.afollestad.material-dialogs:commons:0.9.4.5",
-            "twink-refresh"           : "com.lcodecorex:tkrefreshlayout:1.0.7",//TwinklingRefreshLayout
+            "twink-refresh"          : "com.lcodecorex:tkrefreshlayout:1.0.7",//TwinklingRefreshLayout
             "material-dialog"        : "com.android.design:MaterialDialog:1.1.5",//简单的design风格的弹窗 里面的checkbox不错
             "autolayout"             : "com.zhy:autolayout:1.4.5",
             "advanced-webview"       : "com.github.delight-im:Android-AdvancedWebView:v3.0.0",//增强WebView
@@ -80,8 +80,8 @@ ext {
             //日历组件
             "calendar"               : "com.haibin:calendarview:3.6.8",
             //刷新库 SmartRefreshLayout
-            "smart-refresh"           : "com.scwang.smart:refresh-layout-kernel:2.0.1",
-            "smart-refresh-header"     : "com.scwang.smart:refresh-header-classics:2.0.1",
+            "smart-refresh"          : "com.scwang.smart:refresh-layout-kernel:2.0.1",
+            "smart-refresh-header"   : "com.scwang.smart:refresh-header-classics:2.0.1",
     ]
 }
 
